@@ -1,0 +1,156 @@
+<meta>
+	<!-- Settings -->
+	<info author="StiviK" version="0.2dev 0" name="Open MTA:Multigamemode" type="misc" />
+	<min_mta_version client="1.4.0" server="1.4.0" />		
+	<aclrequest>
+		<right name="function.restartResource" access="true"/>
+		<right name="function.stopResource" access="true"/>
+		<right name="function.kickPlayer" access="true"/>
+	</aclrequest>
+	<oop>true</oop>
+	<include resource="bone_attach"/>
+	
+	<!-- Core -->
+		<!-- Files -->
+			<file src="core/FILES/shader/mask/maskShader.fx"/>
+			<file src="core/FILES/shader/blur/blurShader.fx"/>
+			<file src="core/FILES/shader/mask/mask_images/mask_round_big.png"/>
+			<file src="core/FILES/shader/mask/mask_images/mask_round_small.png"/>
+			<file src="core/FILES/shader/mask/mask_images/mask_round_inside.png"/>
+			<file src="gamemodes/lobby/FILES/images/account/default.jpg"/>
+			<file src="gamemodes/lobby/FILES/images/github/octocat3.png"/>
+			<file src="gamemodes/lobby/FILES/images/github/octocat2.png"/>
+			<file src="gamemodes/lobby/FILES/images/github/octocat1.png"/>
+			<file src="gamemodes/lobby/FILES/images/github/github.png"/>
+
+			<!-- Stuff :p -->
+				<file src="core/FILES/images/stuff/arrow.png"/>
+				<file src="core/FILES/images/stuff/hello.jpg"/>
+			<!-- -->
+
+			<!-- User Avatars -->
+				<file src="core/FILES/images/avatar/stivik.jpg"/>
+				<file src="core/FILES/images/avatar/vandam.png"/>
+				<file src="core/FILES/images/avatar/sbx320.png"/>
+				<file src="core/FILES/images/avatar/doneasty.png"/>
+				<file src="core/FILES/images/avatar/noneatme.jpg"/>
+				<file src="core/FILES/images/avatar/masterm.png"/>
+				<file src="core/FILES/images/avatar/jusonex.png"/>
+				<file src="core/FILES/images/avatar/schlumpf.png"/>
+				<file src="core/FILES/images/avatar/shape.png"/>
+				<file src="core/FILES/images/avatar/dawi.png"/>
+				<file src="core/FILES/images/avatar/poof.png"/>
+				<file src="core/FILES/images/avatar/harrikan.jpg"/>
+			<!-- -->
+		<!-- -->
+
+		<!-- Util functions -->
+		<script src="core/SHARED/util.lua" type="shared" cache="false"/>
+	
+		<!-- Core classes -->
+		<script src="core/SERVER/classes/Core.lua" type="server"/>
+		<script src="core/CLIENT/classes/Core.lua" type="client" cache="false"/>
+	
+		<!-- Settings (Shared) --> 
+		<script src="core/SHARED/Settings.lua" type="shared" cache="false"/>
+		
+		<!-- Language -->
+		<file src="core/FILES/langs/client.en.po"/>
+		
+		<!-- Shared -->
+		<script src="core/SHARED/include/lua_utils/classlib.lua" type="shared" cache="false"/>
+		<script src="core/SHARED/include/no_git/EasyIni.lua" type="shared" cache="false"/>
+		<script src="core/SHARED/include/no_git/middleclass.lua" type="shared" cache="false"/>
+		
+		<script src="core/SHARED/classes/RPC.lua" type="shared" cache="false"/>
+		<script src="core/SHARED/classes/Filemanager.lua" type="shared" cache="false"/>
+		<script src="core/SHARED/classes/POParser.lua" type="shared" cache="false"/>
+		<script src="core/SHARED/classes/TimedPulse.lua" type="shared" cache="false"/>
+		<script src="core/SHARED/classes/Language.lua" type="shared" cache="false"/>
+	
+		<!-- Server -->
+		<script src="core/SERVER/Settings.lua" type="server"/>
+		<script src="core/SERVER/classes/Debugging.lua" type="server"/>
+		<script src="core/SERVER/classes/Database.lua" type="server"/>
+		<script src="core/SERVER/classes/Player.lua" type="server"/>
+		<script src="core/SERVER/classes/Playermanager.lua" type="server"/>
+		<script src="core/SERVER/classes/Gamemode.lua" type="server"/>
+		<script src="core/SERVER/classes/Elementmanager.lua" type="server"/>
+		<script src="core/SERVER/classes/Permissionmanager.lua" type="server"/>
+		<script src="core/SERVER/classes/Mapmanager.lua" type="server"/>
+		<script src="core/SERVER/classes/Downloadmanager.lua" type="server"/>
+		<script src="core/SERVER/management/management.reg-login.lua" type="server"/>
+		<script src="core/SERVER/classes/Statistics.lua" type="server"/>
+			<!-- Statistics -->
+				<script src="core/SERVER/statistics/statistics.playerdata.lua" type="server"/>
+			<!-- -->
+		<script src="core/SERVER/Main.lua" type="server"/>
+		
+		<!-- Client -->
+			<!-- dxClass -->
+				<script src="core/CLIENT/include/old_dxClass/Main.lua" type="client" cache="false" />
+
+				<script src="core/CLIENT/include/dxClass/dx_library.lua" type="client" cache="false" />
+				<script src="core/CLIENT/include/dxClass/dx_button.lua" type="client" cache="false" />
+				<script src="core/CLIENT/include/dxClass/dx_checkbox.lua" type="client" cache="false" />
+				<script src="core/CLIENT/include/dxClass/dx_combobox.lua" type="client" cache="false" />
+				<script src="core/CLIENT/include/dxClass/dx_editfield.lua" type="client" cache="false" />
+				<script src="core/CLIENT/include/dxClass/dx_font.lua" type="client" cache="false" />
+				<script src="core/CLIENT/include/dxClass/dx_gridlist.lua" type="client" cache="false" />
+				<script src="core/CLIENT/include/dxClass/dx_image.lua" type="client" cache="false" />
+				<script src="core/CLIENT/include/dxClass/dx_memo.lua" type="client" cache="false" />
+				<script src="core/CLIENT/include/dxClass/dx_progressbar.lua" type="client" cache="false" />
+				<script src="core/CLIENT/include/dxClass/dx_radiobutton.lua" type="client" cache="false" />
+				<script src="core/CLIENT/include/dxClass/dx_scrollbar.lua" type="client" cache="false" />
+				<script src="core/CLIENT/include/dxClass/dx_scrollpane.lua" type="client" cache="false" />
+				<script src="core/CLIENT/include/dxClass/dx_tab.lua" type="client" cache="false" />
+				<script src="core/CLIENT/include/dxClass/dx_tabpanel.lua" type="client" cache="false" />
+				<script src="core/CLIENT/include/dxClass/dx_text.lua" type="client" cache="false" />
+				<script src="core/CLIENT/include/dxClass/dx_treeview.lua" type="client" cache="false" />
+				<script src="core/CLIENT/include/dxClass/dx_window.lua" type="client" cache="false" />
+			<!-- -->
+
+			<script src="core/CLIENT/Settings.lua" type="client" cache="false"/>
+			<script src="core/CLIENT/classes/Version.lua" type="client" cache="false"/>
+			<script src="core/CLIENT/classes/localPlayer.lua" type="client" cache="false"/>
+			<script src="core/CLIENT/classes/Cursor.lua" type="client" cache="false"/>
+			<script src="core/CLIENT/classes/Downloadmanager.lua" type="client" cache="false"/>
+			<script src="core/CLIENT/classes/Shader.lua" type="client" cache="false"/>
+			<script src="core/CLIENT/classes/maskShader.lua" type="client" cache="false"/>
+			<script src="core/CLIENT/classes/dxUtil.lua" type="client" cache="false"/>
+			<script src="core/CLIENT/classes/Debug.lua" type="client" cache="false"/>
+			<script src="core/CLIENT/widgets/widget.hud.lua" type="client" cache="false"/>
+			<script src="core/CLIENT/widgets/widget.debug.lua" type="client" cache="false"/>
+			<script src="core/CLIENT/forms/register_login/form.login.lua" type="client" cache="false"/>
+			<script src="core/CLIENT/forms/register_login/form.register.lua" type="client" cache="false"/>
+
+			<script src="core/CLIENT/Main.lua" type="client" cache="false"/>
+		<!-- -->
+	<!-- -->
+
+	<!-- Lobby -->
+		<!-- Shared -->
+		
+		<!-- Server -->
+		<script src="gamemodes/lobby/Settings.lua" type="server"/>
+		<script src="gamemodes/lobby/SERVER/Main.lua" type="server"/>
+		
+		<!-- Client -->
+		<script src="gamemodes/lobby/CLIENT/Main.lua" type="client" cache="false"/>
+	<!-- -->
+	
+	<!-- Gamemodes -->
+		<!-- Music Lobby -->
+			<!-- Shared -->
+
+			<!-- Server -->
+			<script src="gamemodes/music/Settings.lua" type="server"/>
+			<script src="gamemodes/music/SERVER/Main.lua" type="server"/>
+
+			<!-- Client -->
+			<script src="gamemodes/music/CLIENT/Main.lua" type="client" cache="false"/>
+		<!-- -->
+
+
+	<!-- -->
+</meta>
