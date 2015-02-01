@@ -1,0 +1,2 @@
+How to update lua_utils:
+Open GitShell and type in: git submodule update --force
